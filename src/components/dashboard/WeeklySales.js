@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Badge, Card, CardBody, Tooltip } from 'bootstrap-react';
 import FalconCardHeader from '../../common/FalconCardHeader';
-// import Flex from '../common/Flex';
 import ReactEchartsCore from 'echarts-for-react/lib/core';
 import echarts from 'echarts/lib/echarts';
 import {
@@ -94,10 +93,11 @@ const WeeklySales = ({ data }) => {
             Weekly Sales{' '}
             <Tooltip
               content="Calculated according to last week's sales"
-              placement="bottom"
+              placement="top"
             >
               {(p) => (
                 <span {...p}>
+                  {console.log(p)}
                   <FontAwesomeIcon
                     icon={['far', 'question-circle']}
                     transform="shrink-1"
@@ -135,6 +135,8 @@ const WeeklySales = ({ data }) => {
   );
 };
 
-WeeklySales.propTypes = { data: PropTypes.array.isRequired };
+WeeklySales.propTypes = {
+  data: PropTypes.array.isRequired,
+};
 
 export default WeeklySales;

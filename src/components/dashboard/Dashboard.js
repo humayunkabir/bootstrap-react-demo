@@ -1,4 +1,5 @@
 import React from 'react';
+import Weather from './Weather';
 import WeeklySales from './WeeklySales';
 
 const Dashboard = () => {
@@ -15,7 +16,17 @@ const Dashboard = () => {
           {/* <MarketShare data={marketShare} /> */}
         </div>
         <div className="col-md-6 col-xxl-3 mb-3 pl-md-2">
-          {/* <Weather data={weather} className="h-md-100" /> */}
+          <Weather
+            data={{
+              city: 'New York City',
+              condition: 'Sunny',
+              precipitation: '50%',
+              temperature: 31,
+              highestTemperature: 32,
+              lowestTemperature: 25,
+            }}
+            className="h-md-100"
+          />
         </div>
       </div>
     </div>
