@@ -1,31 +1,31 @@
-import React from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   Dropdown,
+  DropdownDivider,
   DropdownItem,
   DropdownToggle,
-  DropdownDivider,
-} from 'bootstrap-react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+} from "bootstrap-react";
+import React from "react";
 
 const CardDropdown = () => (
   <Dropdown
-    className="text-sans-serif btn-reveal-trigger"
-    trigger={['focus', 'hover']}
+    utilities="text-sans-serif btn-reveal-trigger"
+    // trigger={['focus', 'hover']}
     toggle={(p) => (
       <DropdownToggle
         {...p}
         color="link"
         size="sm"
-        utilities="btn-reveal text-600"
-      >
+        utilities="btn-reveal text-600">
         <FontAwesomeIcon icon="ellipsis-h" className="fs--2" />
       </DropdownToggle>
-    )}
-  >
+    )}>
     <DropdownItem>View</DropdownItem>
     <DropdownItem>Export</DropdownItem>
     <DropdownDivider />
-    <DropdownItem utilities="text-danger">Remove</DropdownItem>
+    <DropdownItem utilities="bg-danger" href="#!">
+      Remove
+    </DropdownItem>
   </Dropdown>
 );
 

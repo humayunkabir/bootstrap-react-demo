@@ -1,6 +1,10 @@
-import React from 'react';
-import Weather from './Weather';
-import WeeklySales from './WeeklySales';
+import React from "react";
+import marketShare from "../../data/dashboard/marketShare";
+import totalOrder from "../../data/dashboard/totalOrder";
+import MarketShare from "./MarketShare";
+import TotalOrder from "./TotalOrder";
+import Weather from "./Weather";
+import WeeklySales from "./WeeklySales";
 
 const Dashboard = () => {
   return (
@@ -10,17 +14,17 @@ const Dashboard = () => {
           <WeeklySales data={[6000, 10000, 7500, 4000, 3500, 5500, 6000]} />
         </div>
         <div className="col-md-6 col-xxl-3 mb-3 pl-md-2 pr-xxl-2">
-          {/* <TotalOrder data={totalOrder} /> */}
+          <TotalOrder data={totalOrder} />
         </div>
         <div className="col-md-6 col-xxl-3 mb-3 pr-md-2 pl-xxl-2">
-          {/* <MarketShare data={marketShare} /> */}
+          <MarketShare data={marketShare} />
         </div>
         <div className="col-md-6 col-xxl-3 mb-3 pl-md-2">
           <Weather
             data={{
-              city: 'New York City',
-              condition: 'Sunny',
-              precipitation: '50%',
+              city: "New York City",
+              condition: "Sunny",
+              precipitation: "50%",
               temperature: 31,
               highestTemperature: 32,
               lowestTemperature: 25,

@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Card, CardBody } from 'bootstrap-react';
-import FalconCardHeader from '../../common/FalconCardHeader';
-import weatherIcon from '../../assets/img/icons/weather-icon.png';
-import CardDropdown from './CardDropdown';
+import { Card, CardBody } from "bootstrap-react";
+import PropTypes from "prop-types";
+import React from "react";
+import weatherIcon from "../../assets/img/icons/weather-icon.png";
+import FalconCardHeader from "../../common/FalconCardHeader";
+import CardDropdown from "./CardDropdown";
 
 const Weather = ({
   data: {
@@ -21,8 +21,7 @@ const Weather = ({
       title="Weather"
       light={false}
       titleTag="h6"
-      className="pb-0"
-    >
+      className="pb-0">
       <CardDropdown />
     </FalconCardHeader>
     <CardBody className="pt-2">
